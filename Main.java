@@ -1,4 +1,5 @@
 import java.util.*;
+import static java.lang.Math.*;
 
 class Main {
     public static void main(String[] args) {
@@ -60,7 +61,15 @@ class Main {
     	    Calculator.pop();
     	    System.out.println(num2%num1);
     	  }
-    	  
+
+        else if(input.equals("^")){
+          int num1=Integer.parseInt(Calculator.peek());
+          Calculator.pop();
+          int num2=Integer.parseInt(Calculator.peek());
+          Calculator.pop();
+          System.out.println(pow(num2, num1));
+        }
+          
     	  else{
     	    Calculator.push(input);
     	  }
